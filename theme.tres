@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://cxbf03eg421lj"]
 
-[ext_resource type="FontFile" uid="uid://ccjt4wo62o1rd" path="res://assets/fonts/m6x11.ttf" id="1_e1x85"]
+[ext_resource type="FontFile" uid="uid://d0brj1k1wjqro" path="res://assets/fonts/Scratchkin.ttf" id="1_cjfk0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1x85"]
 
@@ -27,10 +27,11 @@ bg_color = Color(0.6666667, 0.09411765, 0.65882355, 1)
 
 [resource]
 Button/colors/font_color = Color(1, 1, 1, 1)
-Button/font_sizes/font_size = 16
-Button/fonts/font = ExtResource("1_e1x85")
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_cjfk0")
 Button/styles/focus = SubResource("StyleBoxEmpty_e1x85")
 Button/styles/hover = SubResource("StyleBoxFlat_cjfk0")
 Button/styles/normal = SubResource("StyleBoxFlat_e1x85")
 Button/styles/pressed = SubResource("StyleBoxFlat_vj6dk")
-RichTextLabel/fonts/normal_font = ExtResource("1_e1x85")
+RichTextLabel/font_sizes/normal_font_size = 12
+RichTextLabel/fonts/normal_font = ExtResource("1_cjfk0")

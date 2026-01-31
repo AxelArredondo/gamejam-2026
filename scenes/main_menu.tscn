@@ -40,11 +40,13 @@ layout_mode = 2
 [node name="Game Title" type="RichTextLabel" parent="Main Screen/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_l6cm7")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 24
 text = "Game Title
 "
 fit_content = true
 autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="Main Screen/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(72, 0)
@@ -98,7 +100,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_l6cm7")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 24
 text = "Settings"
 fit_content = true
 autowrap_mode = 0
@@ -145,7 +147,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_l6cm7")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 24
 text = "Credits"
 fit_content = true
 autowrap_mode = 0
