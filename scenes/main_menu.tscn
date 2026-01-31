@@ -1,0 +1,153 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciw3fj3j0a4er"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Theme" uid="uid://bxeqkmw2bd50j" path="res://theme.tres" id="1_l6cm7"]
+
+[node name="Main Menu" type="Node"]
+script = ExtResource("1_ekxnf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Main Screen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Main Screen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_right = 70.0
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Screen/MarginContainer"]
+layout_mode = 2
+
+[node name="Game Title" type="RichTextLabel" parent="Main Screen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+theme_override_font_sizes/normal_font_size = 32
+text = "Game Title
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Play Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Settings Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Credits Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
+[node name="Settings Screen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_right = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Settings Screen"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_right = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings Screen/MarginContainer"]
+layout_mode = 2
+
+[node name="Settings Title" type="RichTextLabel" parent="Settings Screen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_l6cm7")
+theme_override_font_sizes/normal_font_size = 32
+text = "Settings"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="Back Button" type="Button" parent="Settings Screen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Back"
+
+[node name="Credits Screen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 160.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Credits Screen"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -53.0
+offset_right = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits Screen/MarginContainer"]
+layout_mode = 2
+
+[node name="Credits Title" type="RichTextLabel" parent="Credits Screen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_l6cm7")
+theme_override_font_sizes/normal_font_size = 32
+text = "Credits"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="Back Button" type="Button" parent="Credits Screen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Back"
+
+[connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Settings Button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Credits Button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Settings Screen/MarginContainer/VBoxContainer/Back Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Credits Screen/MarginContainer/VBoxContainer/Back Button" to="." method="_on_back_button_pressed"]

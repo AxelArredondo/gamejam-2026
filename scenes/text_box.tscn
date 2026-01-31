@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://5k0fcifr63s7"]
+[gd_scene load_steps=4 format=3 uid="uid://5k0fcifr63s7"]
 
 [ext_resource type="Script" uid="uid://cmtmvjeg7k8vi" path="res://scripts/text_box.gd" id="1_dyarx"]
 [ext_resource type="Theme" uid="uid://b6yya4uatg1jx" path="res://assets/themes/text_box.tres" id="1_wscpg"]
+[ext_resource type="AudioStream" uid="uid://c4eaa0tecupja" path="res://assets/sounds/Text.ogg" id="3_qdwih"]
 
 [node name="TextBox" type="Node2D"]
 script = ExtResource("1_dyarx")
@@ -15,10 +16,15 @@ offset_right = 232.0
 offset_bottom = 152.0
 theme = ExtResource("1_wscpg")
 bbcode_enabled = true
-text = "[shake rate=15 level=5]This is a piece of example text. It will scroll over time as new lines are added, as you see here."
+text = "You shouldn't be seeing this. What the hell happened?"
 scroll_active = false
 scroll_following_visible_characters = true
 
 [node name="CharacterDrawTimer" type="Timer" parent="."]
+
+[node name="TextBoxSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qdwih")
+volume_db = -20.0
+max_polyphony = 10
 
 [connection signal="timeout" from="CharacterDrawTimer" to="." method="_on_character_draw_timer_timeout"]
