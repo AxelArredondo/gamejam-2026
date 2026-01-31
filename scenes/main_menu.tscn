@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://3812ro1ts3yv"]
+[gd_scene load_steps=4 format=3 uid="uid://3812ro1ts3yv"]
 
 [ext_resource type="Script" uid="uid://dpqs4hnlnxh0k" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://cxbf03eg421lj" path="res://theme.tres" id="1_l6cm7"]
+[ext_resource type="AudioStream" uid="uid://chhqqaya5wf5x" path="res://assets/audio/music/Menu Theme.ogg" id="3_bqqt6"]
 
 [node name="Main Menu" type="Node"]
 script = ExtResource("1_ekxnf")
@@ -45,15 +46,21 @@ text = "Game Title
 fit_content = true
 autowrap_mode = 0
 
-[node name="Play Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer"]
+[node name="Buttons" type="VBoxContainer" parent="Main Screen/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(72, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Play Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer/Buttons"]
 layout_mode = 2
 text = "Play"
 
-[node name="Settings Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer"]
+[node name="Settings Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer/Buttons"]
 layout_mode = 2
 text = "Settings"
 
-[node name="Credits Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer"]
+[node name="Credits Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer/Buttons"]
 layout_mode = 2
 text = "Credits"
 
@@ -98,7 +105,9 @@ autowrap_mode = 0
 horizontal_alignment = 1
 
 [node name="Back Button" type="Button" parent="Settings Screen/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(72, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 10
 text = "Back"
 
@@ -143,11 +152,18 @@ autowrap_mode = 0
 horizontal_alignment = 1
 
 [node name="Back Button" type="Button" parent="Credits Screen/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(72, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 10
 text = "Back"
 
-[connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Settings Button" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Credits Button" to="." method="_on_credits_button_pressed"]
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bqqt6")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Buttons/Settings Button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Buttons/Credits Button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Settings Screen/MarginContainer/VBoxContainer/Back Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Credits Screen/MarginContainer/VBoxContainer/Back Button" to="." method="_on_back_button_pressed"]
