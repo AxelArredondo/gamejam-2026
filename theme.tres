@@ -1,0 +1,36 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cxbf03eg421lj"]
+
+[ext_resource type="FontFile" uid="uid://ccjt4wo62o1rd" path="res://assets/fonts/m6x11.ttf" id="1_e1x85"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1x85"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjfk0"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.6666667, 0.09411765, 0.65882355, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1x85"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.8666667, 0.1764706, 0.9254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vj6dk"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.6666667, 0.09411765, 0.65882355, 1)
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_e1x85")
+Button/styles/focus = SubResource("StyleBoxEmpty_e1x85")
+Button/styles/hover = SubResource("StyleBoxFlat_cjfk0")
+Button/styles/normal = SubResource("StyleBoxFlat_e1x85")
+Button/styles/pressed = SubResource("StyleBoxFlat_vj6dk")
+RichTextLabel/fonts/normal_font = ExtResource("1_e1x85")

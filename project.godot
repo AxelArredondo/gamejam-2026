@@ -13,3 +13,18 @@ config_version=5
 config/name="gamejam2026"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=240
+window/size/viewport_height=160
+window/stretch/mode="viewport"
+
+[gui]
+
+theme/custom="uid://cxbf03eg421lj"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.16862746, 0.16862746, 0.2784314, 1)
