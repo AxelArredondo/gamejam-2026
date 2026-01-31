@@ -1,0 +1,29 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b6yya4uatg1jx"]
+
+[ext_resource type="FontFile" uid="uid://drxy2c5v81kyh" path="res://assets/fonts/Scratchkin.ttf" id="1_vr7lr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8lax"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+expand_margin_left = 4.0
+expand_margin_top = 3.0
+expand_margin_right = 4.0
+expand_margin_bottom = 1.0
+shadow_size = 4
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[resource]
+default_font = ExtResource("1_vr7lr")
+default_font_size = 13
+RichTextLabel/colors/default_color = Color(1, 0, 0, 1)
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_q8lax")
