@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://tv83loi8g0s0"]
+
+[sub_resource type="GDScript" id="GDScript_sbiwg"]
+script/source = "extends Node2D
+
+#var text_box1 = RichTextLabel.new()
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var text_box1 = RichTextLabel.new()
+	text_box1.text = \"Credits\"
+	#text_box1.bbcode_enabled = true # Enable BBCode for rich formatting
+	#text_box1.custom_minimum_size = Vector2(100, 50) # Set minimum size
+	add_child(text_box1)
+	text_box1.position = Vector2(100, 50)
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	#text_box1.position += Vector2(0,-1) * 5 * delta
+	if Input.is_action_just_pressed(\"Escape\"):
+		get_tree().change_scene_to_file(\"res://scenes/Text_Menu.tscn\")
+		
+	pass
+"
+
+[node name="Settings_Scene" type="Node2D"]
+script = SubResource("GDScript_sbiwg")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwbytgfyy2ugp"]
+
+[ext_resource type="Script" uid="uid://b418vvxj02xm1" path="res://scripts/text_Menu.gd" id="1_36uyx"]
+[ext_resource type="Script" uid="uid://dem1hakufnrrw" path="res://scripts/button.gd" id="3_muvs7"]
+[ext_resource type="Script" uid="uid://cherskjvq3l10" path="res://scripts/button_2.gd" id="4_dy1hm"]
+[ext_resource type="Script" uid="uid://bdsgufmcf2aj7" path="res://scripts/button_4.gd" id="5_dy1hm"]
+[ext_resource type="Script" uid="uid://b1e70jhmlvfbw" path="res://scripts/button_3.gd" id="5_mkw5n"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_36uyx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("3_muvs7")
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("4_dy1hm")
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("5_mkw5n")
+
+[node name="Button4" type="Button" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("5_dy1hm")
