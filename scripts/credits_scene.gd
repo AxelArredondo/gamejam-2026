@@ -7,31 +7,29 @@ func _ready() -> void:
 	var text_box1 = RichTextLabel.new()
 	text_box1.text = "
 	Credits
-	
-Cam
-Jordi 
-Rain Vasquez
-Taran Hurley
-Tim 
-Mae
-Conner 
-Autum
-Lemon
+	 
+
+
+
 	
 Game Design/programming
 Axel Arredondo
-Alex Ilnytsky
+Rain Vasquez
+Taran Hurley
+Alex Morosov Ilnytsky
 Rain Vaquez
 Connor Bosco
 Autum Darell
 Mae Moon
 
 Art
-Camille Tsu
-Jordy Usen
+Camille Tsui
+Jordi Usen
 Alma
+Lemon
 
-Music
+Music & Sound
+Autum Darrell
 Tim Rivero
 Jordan Parm
 	"
