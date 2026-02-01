@@ -147,6 +147,7 @@ layout_mode = 2
 size_flags_vertical = 10
 text = "Back"
 
+[connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Settings Button" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Credits Button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Settings Screen/MarginContainer/VBoxContainer/Back Button" to="." method="_on_back_button_pressed"]

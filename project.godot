@@ -11,18 +11,38 @@ config_version=5
 [application]
 
 config/name="gamejam2026"
+run/main_scene="uid://3812ro1ts3yv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MeterSystem="*res://scripts/meter_system.gd"
+
 [display]
 
-window/size/viewport_width=240
-window/size/viewport_height=160
+window/size/viewport_width=320
+window/size/viewport_height=180
 window/stretch/mode="viewport"
 
 [gui]
 
 theme/custom="uid://cxbf03eg421lj"
+
+[input]
+
+AdvanceText={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translation_remaps={
+"res://texts/en.en.translation": PackedStringArray()
+}
+locale/translations=PackedStringArray("res://texts/en.en.translation")
 
 [rendering]
 

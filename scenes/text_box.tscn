@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://brnnb4fql735u"]
+
+[ext_resource type="Script" uid="uid://dk3po5r3qrx46" path="res://scripts/text_box.gd" id="1_dyarx"]
+[ext_resource type="Theme" path="res://assets/themes/text_box.tres" id="1_wscpg"]
+[ext_resource type="AudioStream" uid="uid://b8meuud6jgu6t" path="res://assets/sounds/Text.ogg" id="3_qdwih"]
+
+[node name="TextBox" type="Node2D"]
+script = ExtResource("1_dyarx")
+
+[node name="Text" type="RichTextLabel" parent="."]
+texture_filter = 1
+clip_contents = false
+offset_left = 53.0
+offset_top = 138.0
+offset_right = 277.0
+offset_bottom = 181.0
+size_flags_vertical = 8
+theme = ExtResource("1_wscpg")
+bbcode_enabled = true
+text = "You shouldn't be seeing this. What the hell happened?"
+scroll_active = false
+scroll_following_visible_characters = true
+
+[node name="CharacterDrawTimer" type="Timer" parent="."]
+
+[node name="TextBoxSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(45, 29)
+stream = ExtResource("3_qdwih")
+volume_db = -20.0
+max_polyphony = 10
+
+[connection signal="timeout" from="CharacterDrawTimer" to="." method="_on_character_draw_timer_timeout"]

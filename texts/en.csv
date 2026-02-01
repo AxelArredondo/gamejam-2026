@@ -1,0 +1,10 @@
+keys,en
+TITLE,Undercover
+EXAMPLE_0,[shake rate=15 level=5]This is a piece of example text that will be typed out over time by the write_text() method. It takes up multiple lines and will be scrolled through accordingly.
+EXAMPLE_1,[shake rate=15 level=5][color=white]This is the second piece of text in white.
+EXAMPLE_2,"This is the third piece of text, it's not shaking."
+
+key,en
+FOREMAN_INTRO_0,"Alright, listen up."
+FOREMAN_INTRO_1,"Find the power panel and shut it down."
+FOREMAN_INTRO_2,"Move. Now."
