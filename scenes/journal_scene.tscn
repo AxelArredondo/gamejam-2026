@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://buwws4b0of0xk"]
+
+[ext_resource type="Script" uid="uid://lvvoi0rh4ttu" path="res://scripts/JournalCode.gd" id="1_tk6ut"]
+[ext_resource type="Texture2D" uid="uid://bk0rv2knabac2" path="res://book_8bit_resized.png" id="2_mbx30"]
+
+[node name="JournalScene" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_tk6ut")
+
+[node name="Book8BitResized" type="Sprite2D" parent="."]
+position = Vector2(476, 334)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mbx30")
