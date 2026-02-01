@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://bbtkvqnk47004"]
+
+[ext_resource type="Script" uid="uid://bv5qj0am8mb7r" path="res://scenes/hud.gd" id="1_ahhtf"]
+
+[sub_resource type="Gradient" id="Gradient_ahhtf"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oo0fn"]
+gradient = SubResource("Gradient_ahhtf")
+width = 20
+height = 120
+
+[sub_resource type="Gradient" id="Gradient_5ysmq"]
+colors = PackedColorArray(0.64973843, 0.104210116, 0.6963201, 1, 1, 0.23921569, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6fi6k"]
+gradient = SubResource("Gradient_5ysmq")
+width = 20
+height = 120
+
+[sub_resource type="Gradient" id="Gradient_uo2fv"]
+offsets = PackedFloat32Array(0, 0.98550725, 1)
+colors = PackedColorArray(0.19793725, 0.19793722, 0.19793722, 1, 0.36956522, 0.36956522, 0.36956522, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_047uy"]
+gradient = SubResource("Gradient_uo2fv")
+
+[sub_resource type="Gradient" id="Gradient_5pdws"]
+offsets = PackedFloat32Array(0, 0.028985508, 0.36231884, 0.89855075)
+colors = PackedColorArray(0.8715988, 0.00063301565, 0.87656224, 1, 0.7536232, 0.7536232, 0.7536232, 1, 0.7536232, 0.7536232, 0.7536232, 1, 0.5590941, 0.30329973, 0.8157, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hd3ao"]
+gradient = SubResource("Gradient_5pdws")
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_ahhtf")
+
+[node name="Bars" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MindBar" type="TextureProgressBar" parent="Bars"]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 36.0
+offset_bottom = 136.0
+fill_mode = 3
+texture_under = SubResource("GradientTexture2D_oo0fn")
+texture_progress = SubResource("GradientTexture2D_6fi6k")
+tint_under = Color(0.12591085, 0.12591085, 0.12591082, 1)
+
+[node name="SuspicionBar" type="TextureProgressBar" parent="Bars"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -76.0
+offset_top = 16.0
+offset_right = -56.0
+offset_bottom = 136.0
+grow_horizontal = 0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture1D_047uy")
+texture_progress = SubResource("GradientTexture1D_hd3ao")

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://ctndukjqcimms"]
 
-[ext_resource type="FontFile" uid="uid://k7brsohwt3dw" path="res://assets/fonts/Scratchkin.ttf" id="1_vr7lr"]
+[ext_resource type="FontFile" uid="uid://bvhrrerga2bck" path="res://assets/fonts/Scratchkin.ttf" id="1_vr7lr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8lax"]
 bg_color = Color(0, 0, 0, 1)
