@@ -13,6 +13,6 @@ offset_bottom = 8.0
 script = ExtResource("1_tk6ut")
 
 [node name="Book8BitResized" type="Sprite2D" parent="."]
-position = Vector2(476, 334)
-scale = Vector2(0.5, 0.5)
+position = Vector2(162, 112)
+scale = Vector2(0.17, 0.17)
 texture = ExtResource("2_mbx30")
