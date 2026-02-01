@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://beixssv48cjsi"]
 
-[ext_resource type="Script" uid="uid://bfujtel5s0qhj" path="res://scenes/cave2PauseMenu.gd" id="1_aises"]
+[ext_resource type="Script" path="res://scripts/cave2PauseMenu.gd" id="1_aises"]
 [ext_resource type="Texture2D" uid="uid://dkd6s6476b7dd" path="res://assets/tilesets/gamejam2026-tileset-cave1.png" id="1_w2l0f"]
 [ext_resource type="Texture2D" uid="uid://bbxk6ekslerfm" path="res://assets/tilesets/gamejam2026-tileset-cave2.png" id="2_rawnq"]
 [ext_resource type="PackedScene" uid="uid://cqoribwtcp6en" path="res://scenes/miner_patrol.tscn" id="3_rawnq"]
