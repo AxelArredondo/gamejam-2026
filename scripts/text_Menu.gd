@@ -11,35 +11,35 @@ func _ready() -> void:
 	text_box1.bbcode_enabled = true # Enable BBCode for rich formatting
 	text_box1.custom_minimum_size = Vector2(100, 50) # Set minimum size
 	add_child(text_box1)
-	text_box1.position = Vector2(100, 50)
+	text_box1.position = Vector2(100, 10)
 	
 	var text_box2 = RichTextLabel.new()
 	text_box2.text = "Journal"
 	text_box2.bbcode_enabled = true # Enable BBCode for rich formatting
 	text_box2.custom_minimum_size = Vector2(100, 50) # Set minimum size
 	add_child(text_box2)
-	text_box2.position = Vector2(100, 100)
+	text_box2.position = Vector2(100, 60)
 	
 	var text_box3 = RichTextLabel.new()
 	text_box3.text = "Credits"
 	text_box3.bbcode_enabled = true # Enable BBCode for rich formatting
 	text_box3.custom_minimum_size = Vector2(100, 50) # Set minimum size
 	add_child(text_box3)
-	text_box3.position = Vector2(100, 150)
+	text_box3.position = Vector2(100, 110)
 	
 	var text_box4 = RichTextLabel.new()
 	text_box4.text = "Exit Game"
 	text_box4.bbcode_enabled = true # Enable BBCode for rich formatting
 	text_box4.custom_minimum_size = Vector2(100, 50) # Set minimum size
 	add_child(text_box4)
-	text_box4.position = Vector2(100, 200)
+	text_box4.position = Vector2(100, 160)
 	
 	
-	Arrow.text = "<=="
+	Arrow.text = " <=="
 	Arrow.bbcode_enabled = true # Enable BBCode for rich formatting
-	Arrow.custom_minimum_size = Vector2(100, 50) # Set minimum size
+	Arrow.custom_minimum_size = Vector2(100, 20) # Set minimum size
 	add_child(Arrow)
-	Arrow.position = Vector2(175, 50)
+	Arrow.position = Vector2(175, 20)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -62,9 +62,9 @@ func _process(delta: float) -> void:
 			Selection = 1
 		#$Icon.position += Vector2(0,1) * 50 * delta	
 
-	Arrow.position = Vector2(175, 50*Selection)
+	Arrow.position = Vector2(175, 10+50*Selection-50)
 
-	if Input.is_action_just_pressed("Enter+Select"):
+	if Input.is_action_just_pressed("Enter"):
 		if Selection == 1:
 			get_tree().change_scene_to_file("res://scenes/Settings_Scene.tscn")
 		if Selection == 2:
@@ -74,5 +74,5 @@ func _process(delta: float) -> void:
 		if Selection == 4:
 			get_tree().quit()
 	if Input.is_action_just_pressed("Escape"):
-		get_tree().change_scene_to_file("res://scenes/Main.tscn")
+		get_tree().change_scene_to_file("res://scenes/cave.tscn")
 	pass
