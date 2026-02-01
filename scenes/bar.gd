@@ -1,6 +1,7 @@
 extends TextureProgressBar
 var filling = false
 var fill_speed = 1
+# add pause check
 
 
 

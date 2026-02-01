@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs38u04lx2isc"]
+[gd_scene load_steps=6 format=3 uid="uid://bs38u04lx2isc"]
 
 [ext_resource type="Script" uid="uid://brfthtec1r57t" path="res://scripts/node_2d.gd" id="1_0pvap"]
 [ext_resource type="Texture2D" uid="uid://cs1j4ife5tahf" path="res://icon.svg" id="2_b77ou"]
 [ext_resource type="PackedScene" uid="uid://bhj0ttkhw1iyb" path="res://scenes/MindControlBar.tscn" id="2_jfrxa"]
+[ext_resource type="PackedScene" uid="uid://badcrgvosthkf" path="res://scenes/Susbar.tscn" id="4_jfrxa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jfrxa"]
 
-[node name="Node2D" type="CharacterBody2D"]
+[node name="Node2D" type="CharacterBody2D" groups=["player"]]
 position = Vector2(69, 42)
 script = ExtResource("1_0pvap")
 
@@ -21,6 +22,25 @@ position = Vector2(8, 7.874999)
 scale = Vector2(0.125, 0.11132812)
 texture = ExtResource("2_b77ou")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="TextureProgressBar" parent="." node_paths=PackedStringArray("PlayerCollisionShape") instance=ExtResource("4_jfrxa")]
+offset_left = -15.0
+offset_top = -6.0
+offset_right = 25.0
+offset_bottom = 34.0
+PlayerCollisionShape = NodePath("../Area2D")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(9, 8)
+
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["player"]]
+visible = false
+position = Vector2(7, 8)
 shape = SubResource("CircleShape2D_jfrxa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_jfrxa")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

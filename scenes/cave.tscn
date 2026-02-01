@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://dls1mq51sduj8"]
+[gd_scene load_steps=4 format=3 uid="uid://dls1mq51sduj8"]
+
+[ext_resource type="PackedScene" uid="uid://bs38u04lx2isc" path="res://scenes/placeholdermovement.tscn" id="1_w6v1y"]
+[ext_resource type="Texture2D" uid="uid://cs1j4ife5tahf" path="res://icon.svg" id="2_w2l0f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w6v1y"]
+radius = 11.385299
 
 [node name="Node2D" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-7.0]
+
+[node name="Node2D" parent="." instance=ExtResource("1_w6v1y")]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(159.25, 56.249996)
+scale = Vector2(0.1289063, 0.1132812)
+texture = ExtResource("2_w2l0f")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Sight"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Sight"]]
+position = Vector2(159.25, 56.249996)
+shape = SubResource("CircleShape2D_w6v1y")

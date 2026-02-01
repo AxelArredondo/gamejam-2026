@@ -20,6 +20,11 @@ window/size/viewport_width=240
 window/size/viewport_height=160
 window/stretch/mode="viewport"
 
+[global_group]
+
+Sight=""
+player=""
+
 [gui]
 
 theme/custom="uid://cxbf03eg421lj"
