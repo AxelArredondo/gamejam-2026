@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs38u04lx2isc"]
+
+[ext_resource type="Script" uid="uid://brfthtec1r57t" path="res://scripts/node_2d.gd" id="1_0pvap"]
+[ext_resource type="Texture2D" uid="uid://cs1j4ife5tahf" path="res://icon.svg" id="2_b77ou"]
+[ext_resource type="PackedScene" uid="uid://bhj0ttkhw1iyb" path="res://scenes/MindControlBar.tscn" id="2_jfrxa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jfrxa"]
+
+[node name="Node2D" type="CharacterBody2D"]
+script = ExtResource("1_0pvap")
+
+[node name="Maskbar" parent="." instance=ExtResource("2_jfrxa")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 7.874999)
+scale = Vector2(0.125, 0.11132812)
+texture = ExtResource("2_b77ou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_jfrxa")
