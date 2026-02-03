@@ -5,8 +5,8 @@ var journal_path := "res://journal.txt"
 
 func _ready() -> void:
 	editable = true
-	size = Vector2(700, 400)
-	position = Vector2(120, 50)
+	size = Vector2(280, 140)
+	position = Vector2(20, 30)
 	text = "Write your journal here...then press ESC"
 	open_journal()
 	var style_box = StyleBoxFlat.new()
