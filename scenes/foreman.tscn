@@ -1,6 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://cxlpwl1xip81e"]
+[gd_scene format=3 uid="uid://cxlpwl1xip81e"]
 
-[ext_resource type="Script" path="res://scenes/foreman.gd" id="1_m718i"]
+[ext_resource type="Script" uid="uid://lsdb1p7gg2m8" path="res://scripts/foreman.gd" id="1_m718i"]
 [ext_resource type="Texture2D" uid="uid://cfw018ts4vp7b" path="res://assets/enemies/miner_sheet.png" id="1_w82om"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m718i"]

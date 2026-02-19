@@ -1,19 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7g2sghmmiiv0"]
+[gd_scene format=3 uid="uid://wesyle5v4jj2"]
 
-[ext_resource type="Texture2D" uid="uid://bdyagggl3wkq0" path="res://assets/tilesets/switch.png" id="1_1i7pn"]
-[ext_resource type="Script" uid="uid://dj5kvy537fx0i" path="res://scenes/wall_switch.gd" id="1_e08h5"]
+[ext_resource type="Texture2D" uid="uid://bdyagggl3wkq0" path="res://assets/objects/switch.png" id="1_1i7pn"]
+[ext_resource type="Script" uid="uid://dj5kvy537fx0i" path="res://scripts/wall_switch.gd" id="1_e08h5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e08h5"]
 atlas = ExtResource("1_1i7pn")
-region = Rect2(41, 0, 41, 27)
+region = Rect2(46, 0, 41, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nnoiq"]
 atlas = ExtResource("1_1i7pn")
-region = Rect2(0, 0, 41, 27)
+region = Rect2(0, 0, 40, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4m6b1"]
 atlas = ExtResource("1_1i7pn")
-region = Rect2(82, 0, 41, 27)
+region = Rect2(88, 0, 35, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w78pk"]
 atlas = ExtResource("1_1i7pn")
@@ -47,17 +47,19 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1i7pn"]
 size = Vector2(64, 71)
 
-[node name="WallSwitch" type="Node2D"]
+[node name="WallSwitch" type="Node2D" unique_id=2140294648]
 script = ExtResource("1_e08h5")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=651058745]
 sprite_frames = SubResource("SpriteFrames_ny1gh")
 animation = &"idle_off"
+frame = 2
+frame_progress = 1.0
 flip_h = true
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1141258583]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1690344238]
 position = Vector2(-17, -1)
 shape = SubResource("RectangleShape2D_1i7pn")
 

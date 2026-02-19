@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://brw7y2uimlkwf"
+path="res://.godot/imported/Game Over I Death Noise.ogg-e0b78cb4f1de945d59c930b55def39aa.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/Game Over I Death Noise.ogg"
+dest_files=["res://.godot/imported/Game Over I Death Noise.ogg-e0b78cb4f1de945d59c930b55def39aa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

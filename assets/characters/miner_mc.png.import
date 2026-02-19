@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdyagggl3wkq0"
-path="res://.godot/imported/switch.png-a00e5b3d44dbdcc72a9a1e7ce617110b.ctex"
+uid="uid://1yxqg7g2yv30"
+path="res://.godot/imported/miner_mc.png-63fff0d228d13704495dea9b44f5b586.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/switch.png"
-dest_files=["res://.godot/imported/switch.png-a00e5b3d44dbdcc72a9a1e7ce617110b.ctex"]
+source_file="res://assets/characters/miner_mc.png"
+dest_files=["res://.godot/imported/miner_mc.png-63fff0d228d13704495dea9b44f5b586.ctex"]
 
 [params]
 

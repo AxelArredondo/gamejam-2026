@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://12w5oyxa1ed5"]
+[gd_scene format=3 uid="uid://12w5oyxa1ed5"]
 
-[ext_resource type="Script" uid="uid://cuo2d87ntoy8v" path="res://scenes/vision_sensor.gd" id="1_v6qb6"]
+[ext_resource type="Script" uid="uid://cuo2d87ntoy8v" path="res://scripts/vision_sensor.gd" id="1_v6qb6"]
 
-[node name="VisionSensor" type="Area2D"]
+[node name="VisionSensor" type="Area2D" unique_id=610952872]
 script = ExtResource("1_v6qb6")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(0, 0, 69, 43, 69, -40, 36, -21)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1480786206]
+polygon = PackedVector2Array(0, 0, 141, 53, 141, -73)

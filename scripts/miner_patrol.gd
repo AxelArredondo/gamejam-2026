@@ -60,20 +60,28 @@ func _face_direction(v: Vector2) -> void:
 		vision.rotation_degrees = 90 if v.y > 0 else 270
 		sprite.play("walk_side") 
 
+@export var seen_multiplier: float = 2.0  # "seen" makes it ~2x faster than normal
+
+@export var extra_suspicion_when_seen_unmasked: float = 6.0 # extra per second
+
 func _apply_suspicion(delta: float) -> void:
 	if not _seeing_player or _player_ref == null:
 		return
 
-	var mask_on: bool = false
+	# Check mask state from player
+	var mask_on := false
 	if _player_ref.has_method("is_mask_on"):
 		mask_on = _player_ref.call("is_mask_on") as bool
 	elif "mask_on" in _player_ref:
 		mask_on = bool(_player_ref.mask_on)
 
-	if not mask_on:
-		MeterSystem.add_suspicion(suspicion_rate_mask_off * delta)
-	elif add_suspicion_when_mask_on:
-		MeterSystem.add_suspicion(suspicion_rate_mask_on * delta)
+	# If masked, do NOT increase rate (stay at base timer only)
+	if mask_on:
+		return
+
+	# If unmasked and seen, add extra suspicion (on top of base timer)
+	MeterSystem.add_suspicion(extra_suspicion_when_seen_unmasked * delta)
+
 
 func _on_player_seen(player: Node) -> void:
 	_seeing_player = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3jmaugm1co66"
+path="res://.godot/imported/Detected Alert.ogg-ab02192cf565ede3d42e765bb04d3663.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/Detected Alert.ogg"
+dest_files=["res://.godot/imported/Detected Alert.ogg-ab02192cf565ede3d42e765bb04d3663.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://crfqqv822gaaj"
+path="res://.godot/imported/Overworld Layered WIP.mp3-d1ca7a379fa2ba187404b1415ad0719a.mp3str"
+
+[deps]
+
+source_file="res://music/Overworld Layered WIP.mp3"
+dest_files=["res://.godot/imported/Overworld Layered WIP.mp3-d1ca7a379fa2ba187404b1415ad0719a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

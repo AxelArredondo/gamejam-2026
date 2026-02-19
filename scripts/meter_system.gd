@@ -30,5 +30,17 @@ func stop_suspicion_timer() -> void:
 	suspicion_timer_running = false
 
 func _process(delta: float) -> void:
+	# Slow automatic suspicion increase (if timer running)
 	if suspicion_timer_running and suspicion_timer_rate > 0.0:
 		add_suspicion(suspicion_timer_rate * delta)
+
+# -------------------------
+# Helper function for NPC collision suspicion
+# -------------------------
+# npc_suspicion_rate = base suspicion rate for seeing the player
+# collision_bonus = extra suspicion if physically colliding
+func add_suspicion_from_npc(npc_suspicion_rate: float, collision_bonus: float = 0.0, delta: float = 0.016) -> void:
+	var total = npc_suspicion_rate * delta
+	if collision_bonus > 0.0:
+		total += collision_bonus * delta
+	add_suspicion(total)

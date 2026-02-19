@@ -40,7 +40,7 @@ func _has_los(player: Node) -> bool:
 	var to := (player as Node2D).global_position
 	var query := PhysicsRayQueryParameters2D.create(from, to)
 	query.collision_mask = ray_mask
-	query.exclude = [self]
+	query.exclude = [self, player]  # exclude player so ray only hits walls
 	var hit := space.intersect_ray(query)
 	return hit.is_empty()
 

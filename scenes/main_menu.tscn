@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://3812ro1ts3yv"]
+[gd_scene load_steps=5 format=3 uid="uid://3812ro1ts3yv"]
 
 [ext_resource type="Script" uid="uid://dpqs4hnlnxh0k" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://cxbf03eg421lj" path="res://theme.tres" id="1_l6cm7"]
+[ext_resource type="AudioStream" uid="uid://cpx0w1if0jrt7" path="res://music/Menu Theme.ogg" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://cxba0306ctg21" path="res://assets/images/MENU_2.png" id="4_wu84c"]
 
 [node name="Main Menu" type="Node"]
 script = ExtResource("1_ekxnf")
@@ -21,13 +23,18 @@ size_flags_vertical = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="Main Screen"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -70.0
-offset_right = 70.0
-offset_bottom = 110.0
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -83.0
+offset_right = 71.0
+offset_bottom = 27.0
 grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0046235, 1.1766655)
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
@@ -40,7 +47,7 @@ layout_mode = 2
 layout_mode = 2
 theme = ExtResource("1_l6cm7")
 theme_override_font_sizes/normal_font_size = 32
-text = "Game Title
+text = "Crystal Cave
 "
 fit_content = true
 autowrap_mode = 0
@@ -62,8 +69,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -240.0
-offset_right = -240.0
+offset_left = -320.0
+offset_right = -320.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -107,8 +114,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 160.0
-offset_bottom = 160.0
+offset_top = 179.0
+offset_bottom = 179.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -135,6 +142,7 @@ layout_mode = 2
 [node name="Credits Title" type="RichTextLabel" parent="Credits Screen/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 8
 theme = ExtResource("1_l6cm7")
 theme_override_font_sizes/normal_font_size = 32
 text = "Credits"
@@ -146,6 +154,21 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 10
 text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bqqt6")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_wu84c")
+expand_mode = 2
 
 [connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Settings Button" to="." method="_on_settings_button_pressed"]

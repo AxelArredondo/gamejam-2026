@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://cv0d3xsishdot"]
+[gd_scene format=3 uid="uid://cqoribwtcp6en"]
 
 [ext_resource type="Texture2D" uid="uid://cfw018ts4vp7b" path="res://assets/enemies/miner_sheet.png" id="1_3vyb7"]
-[ext_resource type="Script" path="res://scenes/miner_patrol.gd" id="1_bw64e"]
+[ext_resource type="Script" uid="uid://31jagnvym2u5" path="res://scripts/miner_patrol.gd" id="1_bw64e"]
 [ext_resource type="PackedScene" uid="uid://12w5oyxa1ed5" path="res://scenes/visionSensor.tscn" id="2_qcpy4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bsseh"]
@@ -145,19 +145,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="MinerPatrol" type="CharacterBody2D"]
+[node name="MinerPatrol" type="CharacterBody2D" unique_id=202831318]
 script = ExtResource("1_bw64e")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2029599384]
 position = Vector2(-1.0000002, 6)
 shape = SubResource("RectangleShape2D_bsseh")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=623362377]
 sprite_frames = SubResource("SpriteFrames_jej6c")
 animation = &"walk_side"
 frame = 3
 frame_progress = 0.90132195
 
-[node name="VisionSensor" parent="." instance=ExtResource("2_qcpy4")]
+[node name="VisionSensor" parent="." unique_id=1931975940 instance=ExtResource("2_qcpy4")]
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=982847561]

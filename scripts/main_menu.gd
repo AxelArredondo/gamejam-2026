@@ -7,8 +7,8 @@ var tween
 
 const SCREENS = {
 	"main": Vector2.ZERO,
-	"settings": Vector2(-240, 0),
-	"credits": Vector2(0, 160)
+	"settings": Vector2(-320, 0),
+	"credits": Vector2(0, 180)
 }
 
 func switch_screen(screen):
@@ -28,7 +28,7 @@ func _on_credits_button_pressed() -> void:
 	switch_screen("credits")
 
 func _on_back_button_pressed() -> void:
-	switch_screen("back")
+	switch_screen("main")
 
 func _on_play_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/cave.tscn")

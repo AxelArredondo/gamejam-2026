@@ -1,7 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://d3cjcxqdd43tl"]
+[gd_scene format=3 uid="uid://d3cjcxqdd43tl"]
 
 [ext_resource type="Texture2D" uid="uid://cfw018ts4vp7b" path="res://assets/enemies/miner_sheet.png" id="1_7somy"]
-[ext_resource type="Script" uid="uid://52eogchp5m53" path="res://scenes/miner_overseer.gd" id="1_q0lvq"]
+[ext_resource type="Script" uid="uid://52eogchp5m53" path="res://scripts/miner_overseer.gd" id="1_q0lvq"]
 [ext_resource type="PackedScene" uid="uid://12w5oyxa1ed5" path="res://scenes/visionSensor.tscn" id="2_q0lvq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3nepj"]
@@ -112,19 +112,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="MinerOverseer" type="Node2D"]
+[node name="MinerOverseer" type="Node2D" unique_id=1625059484]
 script = ExtResource("1_q0lvq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1561821728]
 position = Vector2(-1.0000002, 6)
 shape = SubResource("RectangleShape2D_3nepj")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=640677089]
 position = Vector2(2, 0)
 sprite_frames = SubResource("SpriteFrames_byavb")
 animation = &"front idle"
 
-[node name="VisionSensor" parent="." instance=ExtResource("2_q0lvq")]
+[node name="VisionSensor" parent="." unique_id=875172538 instance=ExtResource("2_q0lvq")]
 position = Vector2(8, -9)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=855475051]

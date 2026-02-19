@@ -13,10 +13,6 @@ var is_on: bool = true
 var _busy: bool = false
 
 func _ready() -> void:
-	# Debug: confirm animations exist
-	if sprite.sprite_frames != null:
-		print("Switch animations:", sprite.sprite_frames.get_animation_names())
-
 	# Start on pose
 	if _has_anim("idle_on"):
 		sprite.play("idle_on")

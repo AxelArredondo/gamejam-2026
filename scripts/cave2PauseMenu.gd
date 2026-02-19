@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	MeterSystem.start_suspicion_timer(.25) # base rate (tune this)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

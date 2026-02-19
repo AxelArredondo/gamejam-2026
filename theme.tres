@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cxbf03eg421lj"]
+[gd_resource type="Theme" format=3 uid="uid://cxbf03eg421lj"]
 
 [ext_resource type="FontFile" uid="uid://ccjt4wo62o1rd" path="res://assets/fonts/m6x11.ttf" id="1_e1x85"]
 
@@ -10,6 +10,11 @@ content_margin_top = 2.0
 content_margin_right = 2.0
 content_margin_bottom = 2.0
 bg_color = Color(0.6666667, 0.09411765, 0.65882355, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1x85"]
 content_margin_left = 2.0
@@ -17,6 +22,11 @@ content_margin_top = 2.0
 content_margin_right = 2.0
 content_margin_bottom = 2.0
 bg_color = Color(0.8666667, 0.1764706, 0.9254902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vj6dk"]
 content_margin_left = 2.0
@@ -33,4 +43,6 @@ Button/styles/focus = SubResource("StyleBoxEmpty_e1x85")
 Button/styles/hover = SubResource("StyleBoxFlat_cjfk0")
 Button/styles/normal = SubResource("StyleBoxFlat_e1x85")
 Button/styles/pressed = SubResource("StyleBoxFlat_vj6dk")
+RichTextLabel/colors/table_border = Color(0, 0, 0, 1)
+RichTextLabel/constants/outline_size = 3
 RichTextLabel/fonts/normal_font = ExtResource("1_e1x85")

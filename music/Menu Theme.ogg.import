@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cpx0w1if0jrt7"
+path="res://.godot/imported/Menu Theme.ogg-6e692bfa440235e55db0fe7d169f0e01.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/Menu Theme.ogg"
+dest_files=["res://.godot/imported/Menu Theme.ogg-6e692bfa440235e55db0fe7d169f0e01.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

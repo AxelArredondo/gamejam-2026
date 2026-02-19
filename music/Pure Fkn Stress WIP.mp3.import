@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5phr4derx1pn"
+path="res://.godot/imported/Pure Fkn Stress WIP.mp3-afac6b97c6d86a6af055ecba57e0c75d.mp3str"
+
+[deps]
+
+source_file="res://music/Pure Fkn Stress WIP.mp3"
+dest_files=["res://.godot/imported/Pure Fkn Stress WIP.mp3-afac6b97c6d86a6af055ecba57e0c75d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
