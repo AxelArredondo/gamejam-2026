@@ -1,17 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://3812ro1ts3yv"]
+[gd_scene format=3 uid="uid://3812ro1ts3yv"]
 
 [ext_resource type="Script" uid="uid://dpqs4hnlnxh0k" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://cxbf03eg421lj" path="res://theme.tres" id="1_l6cm7"]
 [ext_resource type="AudioStream" uid="uid://cpx0w1if0jrt7" path="res://music/Menu Theme.ogg" id="3_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://cxba0306ctg21" path="res://assets/images/MENU_2.png" id="4_wu84c"]
 
-[node name="Main Menu" type="Node"]
+[node name="Main Menu" type="Node" unique_id=2057887975]
 script = ExtResource("1_ekxnf")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=531101900]
 anchor_mode = 0
 
-[node name="Main Screen" type="Control" parent="."]
+[node name="Main Screen" type="Control" parent="." unique_id=54298900]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +21,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="Main Screen"]
+[node name="MarginContainer" type="MarginContainer" parent="Main Screen" unique_id=617634879]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -40,10 +40,10 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Main Screen/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Screen/MarginContainer" unique_id=2039568786]
 layout_mode = 2
 
-[node name="Game Title" type="RichTextLabel" parent="Main Screen/MarginContainer/VBoxContainer"]
+[node name="Game Title" type="RichTextLabel" parent="Main Screen/MarginContainer/VBoxContainer" unique_id=1464040392]
 layout_mode = 2
 theme = ExtResource("1_l6cm7")
 theme_override_font_sizes/normal_font_size = 32
@@ -52,19 +52,19 @@ text = "Crystal Cave
 fit_content = true
 autowrap_mode = 0
 
-[node name="Play Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer"]
+[node name="Play Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer" unique_id=1351381905]
 layout_mode = 2
 text = "Play"
 
-[node name="Settings Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer"]
+[node name="Settings Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer" unique_id=577800615]
 layout_mode = 2
 text = "Settings"
 
-[node name="Credits Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer"]
+[node name="Credits Button" type="Button" parent="Main Screen/MarginContainer/VBoxContainer" unique_id=1240496685]
 layout_mode = 2
 text = "Credits"
 
-[node name="Settings Screen" type="Control" parent="."]
+[node name="Settings Screen" type="Control" parent="." unique_id=1456509018]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,7 +76,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="Settings Screen"]
+[node name="MarginContainer" type="MarginContainer" parent="Settings Screen" unique_id=1365915980]
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -91,10 +91,10 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Settings Screen/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings Screen/MarginContainer" unique_id=1649385154]
 layout_mode = 2
 
-[node name="Settings Title" type="RichTextLabel" parent="Settings Screen/MarginContainer/VBoxContainer"]
+[node name="Settings Title" type="RichTextLabel" parent="Settings Screen/MarginContainer/VBoxContainer" unique_id=2028213606]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_l6cm7")
@@ -104,12 +104,12 @@ fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
 
-[node name="Back Button" type="Button" parent="Settings Screen/MarginContainer/VBoxContainer"]
+[node name="Back Button" type="Button" parent="Settings Screen/MarginContainer/VBoxContainer" unique_id=393898384]
 layout_mode = 2
 size_flags_vertical = 10
 text = "Back"
 
-[node name="Credits Screen" type="Control" parent="."]
+[node name="Credits Screen" type="Control" parent="." unique_id=834719446]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -121,7 +121,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="Credits Screen"]
+[node name="MarginContainer" type="MarginContainer" parent="Credits Screen" unique_id=1337417657]
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -136,10 +136,10 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Credits Screen/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits Screen/MarginContainer" unique_id=722368133]
 layout_mode = 2
 
-[node name="Credits Title" type="RichTextLabel" parent="Credits Screen/MarginContainer/VBoxContainer"]
+[node name="Credits Title" type="RichTextLabel" parent="Credits Screen/MarginContainer/VBoxContainer" unique_id=1492609061]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -150,16 +150,17 @@ fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
 
-[node name="Back Button" type="Button" parent="Credits Screen/MarginContainer/VBoxContainer"]
+[node name="Back Button" type="Button" parent="Credits Screen/MarginContainer/VBoxContainer" unique_id=975138279]
 layout_mode = 2
 size_flags_vertical = 10
 text = "Back"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1265525325]
 stream = ExtResource("3_bqqt6")
+volume_db = -10.0
 autoplay = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1318040040]
 z_index = -10
 anchors_preset = 15
 anchor_right = 1.0

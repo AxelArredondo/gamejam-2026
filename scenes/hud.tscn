@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbtkvqnk47004"]
+[gd_scene format=3 uid="uid://ckgle3aabjcws"]
 
-[ext_resource type="Script" uid="uid://bv5qj0am8mb7r" path="res://scenes/hud.gd" id="1_ahhtf"]
+[ext_resource type="Script" uid="uid://bv5qj0am8mb7r" path="res://scripts/hud.gd" id="1_ahhtf"]
 
 [sub_resource type="Gradient" id="Gradient_ahhtf"]
 
@@ -31,10 +31,10 @@ colors = PackedColorArray(0.8715988, 0.00063301565, 0.87656224, 1, 0.7536232, 0.
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_hd3ao"]
 gradient = SubResource("Gradient_5pdws")
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" unique_id=519485507]
 script = ExtResource("1_ahhtf")
 
-[node name="Bars" type="Control" parent="."]
+[node name="Bars" type="Control" parent="." unique_id=738323730]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,7 +42,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MindBar" type="TextureProgressBar" parent="Bars"]
+[node name="MindBar" type="TextureProgressBar" parent="Bars" unique_id=113893378]
 layout_mode = 1
 offset_left = 16.0
 offset_top = 16.0
@@ -53,7 +53,7 @@ texture_under = SubResource("GradientTexture2D_oo0fn")
 texture_progress = SubResource("GradientTexture2D_6fi6k")
 tint_under = Color(0.12591085, 0.12591085, 0.12591082, 1)
 
-[node name="SuspicionBar" type="TextureProgressBar" parent="Bars"]
+[node name="SuspicionBar" type="TextureProgressBar" parent="Bars" unique_id=361731785]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0

@@ -7,11 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://brwjts0lxqwpo" path="res://scenes/player.tscn" id="4_ywssb"]
 [ext_resource type="PackedScene" uid="uid://cxlpwl1xip81e" path="res://scenes/foreman.tscn" id="5_6sqbx"]
 [ext_resource type="PackedScene" uid="uid://brnnb4fql735u" path="res://scenes/text_box.tscn" id="6_ip074"]
-[ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="7_ip074"]
+[ext_resource type="PackedScene" uid="uid://ckgle3aabjcws" path="res://scenes/hud.tscn" id="7_ip074"]
 [ext_resource type="PackedScene" uid="uid://wesyle5v4jj2" path="res://scenes/switch.tscn" id="8_cameo"]
 [ext_resource type="Script" uid="uid://2dy06a3clkqr" path="res://scripts/barrier.gd" id="9_uonky"]
 [ext_resource type="Texture2D" uid="uid://dnlhwq1h4f1fx" path="res://assets/objects/electric water.png" id="11_5eofc"]
 [ext_resource type="AudioStream" uid="uid://crfqqv822gaaj" path="res://music/Overworld Layered WIP.mp3" id="11_c3r8b"]
+[ext_resource type="Script" uid="uid://d30jwdc8u62tm" path="res://scenes/minigame_manager.gd" id="13_5h2uv"]
+[ext_resource type="PackedScene" uid="uid://qaj1q5rxqs7q" path="res://scenes/minigames/MinigameOverlay.tscn" id="14_koeun"]
+[ext_resource type="AudioStream" uid="uid://brw7y2uimlkwf" path="res://assets/sounds/Game Over I Death Noise.ogg" id="15_4geow"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_w2l0f"]
 tile_data = PackedInt32Array(0, 0, 3, 65536, 0, 3, 131072, 0, 3, 196608, 0, 3, 262144, 0, 4, 1, 65536, 3, 65537, 65536, 3, 131073, 65536, 3, 196609, 65536, 3, 262145, 65536, 4, 2, 65536, 3, 65538, 65536, 3, 131074, 65536, 3, 196610, 65536, 3, 262146, 262144, 3, 3, 65536, 3, 65539, 65536, 3, 131075, 65536, 3, 196611, 65536, 3, 262147, 65536, 3, 4, 65536, 3, 65540, 65536, 3, 131076, 65536, 3, 196612, 65536, 3, 262148, 196608, 3, 5, 65536, 3, 65541, 65536, 3, 131077, 65536, 3, 196613, 65536, 3, 262149, 65536, 4, 6, 131072, 3, 65542, 131072, 3, 131078, 131072, 3, 196614, 131072, 3, 262150, 131072, 4)
@@ -195,6 +198,8 @@ layer_0/tile_data = PackedInt32Array(393220, 65536, 3, 393219, 0, 3, 393222, 131
 [node name="Player" parent="." unique_id=1870413896 instance=ExtResource("4_ywssb")]
 z_index = 1
 position = Vector2(161.25641, 173.29114)
+music_player_path = NodePath("../Music")
+death_sfx_path = NodePath("../DeathSFX")
 
 [node name="Foreman" parent="." unique_id=740167144 instance=ExtResource("5_6sqbx")]
 position = Vector2(161, 127)
@@ -215,7 +220,7 @@ curve = SubResource("Curve2D_6sqbx")
 [node name="HUD" parent="." unique_id=523569656 instance=ExtResource("7_ip074")]
 
 [node name="WallSwitch" parent="." unique_id=1493941326 instance=ExtResource("8_cameo")]
-position = Vector2(1027.9501, -277.43985)
+position = Vector2(1036, -289)
 
 [node name="Barrier" type="StaticBody2D" parent="." unique_id=1046626266]
 position = Vector2(290.54245, 115.202255)
@@ -231,9 +236,18 @@ scale = Vector2(0.953125, 0.9531249)
 sprite_frames = SubResource("SpriteFrames_do11t")
 animation = &"idle"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=522618070]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=522618070]
 stream = ExtResource("11_c3r8b")
 autoplay = true
 parameters/looping = true
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1856991002]
+
+[node name="MinigameManager" type="Node" parent="UI" unique_id=1498249432]
+script = ExtResource("13_5h2uv")
+overlay_scene = ExtResource("14_koeun")
+
+[node name="DeathSFX" type="AudioStreamPlayer2D" parent="." unique_id=1039130683]
+stream = ExtResource("15_4geow")
 
 [connection signal="switched_off" from="WallSwitch" to="Barrier" method="deactivate"]
