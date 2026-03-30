@@ -19,6 +19,10 @@ run/main_scene="uid://3812ro1ts3yv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://dto22rev0onc2"
+
 [autoload]
 
 MeterSystem="*res://scripts/meter_system.gd"
@@ -27,6 +31,7 @@ MeterSystem="*res://scripts/meter_system.gd"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
+window/size/mode=2
 window/stretch/mode="viewport"
 
 [global_group]

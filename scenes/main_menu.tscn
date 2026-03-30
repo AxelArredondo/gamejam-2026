@@ -2,8 +2,45 @@
 
 [ext_resource type="Script" uid="uid://dpqs4hnlnxh0k" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://cxbf03eg421lj" path="res://theme.tres" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://ccjt4wo62o1rd" path="res://assets/fonts/m6x11.ttf" id="3_8ln24"]
 [ext_resource type="AudioStream" uid="uid://cpx0w1if0jrt7" path="res://music/Menu Theme.ogg" id="3_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://cxba0306ctg21" path="res://assets/images/MENU_2.png" id="4_wu84c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.8666667, 0.1764706, 0.9254902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.8666667, 0.1764706, 0.9254902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.6666667, 0.09411765, 0.65882355, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
 
 [node name="Main Menu" type="Node" unique_id=2057887975]
 script = ExtResource("1_ekxnf")
@@ -64,6 +101,10 @@ text = "Settings"
 layout_mode = 2
 text = "Credits"
 
+[node name="Exit" type="Button" parent="Main Screen/MarginContainer/VBoxContainer" unique_id=689688098]
+layout_mode = 2
+text = "Exit"
+
 [node name="Settings Screen" type="Control" parent="." unique_id=1456509018]
 layout_mode = 3
 anchors_preset = 15
@@ -103,6 +144,26 @@ text = "Settings"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
+
+[node name="Music Label" type="Label" parent="Settings Screen/MarginContainer/VBoxContainer" unique_id=704461677]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music Slider" type="HSlider" parent="Settings Screen/MarginContainer/VBoxContainer" unique_id=570420612]
+layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_8ln24")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Fullscreen Toggle" type="CheckButton" parent="Settings Screen/MarginContainer/VBoxContainer" unique_id=1043414107]
+layout_mode = 2
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rtw2f")
+text = "Fullscreen"
 
 [node name="Back Button" type="Button" parent="Settings Screen/MarginContainer/VBoxContainer" unique_id=393898384]
 layout_mode = 2
@@ -159,6 +220,7 @@ text = "Back"
 stream = ExtResource("3_bqqt6")
 volume_db = -10.0
 autoplay = true
+bus = &"Music"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1318040040]
 z_index = -10
@@ -174,5 +236,9 @@ expand_mode = 2
 [connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Settings Button" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Credits Button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_button_pressed"]
+[connection signal="ready" from="Settings Screen/MarginContainer/VBoxContainer/Music Slider" to="." method="_on_music_slider_ready"]
+[connection signal="value_changed" from="Settings Screen/MarginContainer/VBoxContainer/Music Slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="toggled" from="Settings Screen/MarginContainer/VBoxContainer/Fullscreen Toggle" to="." method="_on_fullscreen_toggled"]
 [connection signal="pressed" from="Settings Screen/MarginContainer/VBoxContainer/Back Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Credits Screen/MarginContainer/VBoxContainer/Back Button" to="." method="_on_back_button_pressed"]

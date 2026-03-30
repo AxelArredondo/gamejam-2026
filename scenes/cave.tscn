@@ -239,6 +239,7 @@ animation = &"idle"
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=522618070]
 stream = ExtResource("11_c3r8b")
 autoplay = true
+bus = &"Music"
 parameters/looping = true
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1856991002]

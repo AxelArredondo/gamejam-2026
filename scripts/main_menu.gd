@@ -27,8 +27,34 @@ func _on_settings_button_pressed() -> void:
 func _on_credits_button_pressed() -> void:
 	switch_screen("credits")
 
+func _on_exit_button_pressed() -> void:
+	get_tree().quit() # Quit game
+
 func _on_back_button_pressed() -> void:
 	switch_screen("main")
 
 func _on_play_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/cave.tscn")
+
+###################
+# SETTINGS SCREEN #
+###################
+
+var music_bus_id
+
+func _on_music_slider_ready() -> void:
+	# Get music audio bus id number
+	music_bus_id = AudioServer.get_bus_index("Music")
+
+func _on_music_slider_value_changed(value: float) -> void:
+	# Convert linear value of slider to non-linear decibels
+	var db = linear_to_db(value)
+
+	# Tie slider position to volume in decibels
+	AudioServer.set_bus_volume_db(music_bus_id, db)
+
+func _on_fullscreen_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
