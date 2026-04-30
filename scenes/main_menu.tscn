@@ -4,7 +4,8 @@
 [ext_resource type="Theme" uid="uid://cxbf03eg421lj" path="res://theme.tres" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://ccjt4wo62o1rd" path="res://assets/fonts/m6x11.ttf" id="3_8ln24"]
 [ext_resource type="AudioStream" uid="uid://cpx0w1if0jrt7" path="res://music/Menu Theme.ogg" id="3_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://cxba0306ctg21" path="res://assets/images/MENU_2.png" id="4_wu84c"]
+[ext_resource type="Texture2D" uid="uid://b4h7kmr5kkyn2" path="res://assets/images/main_menu_title.png" id="5_8ln24"]
+[ext_resource type="Texture2D" uid="uid://cfvxgghu8ieaj" path="res://assets/images/main_menu_credits.png" id="6_rtw2f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
 content_margin_left = 2.0
@@ -175,8 +176,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 179.0
-offset_bottom = 179.0
+offset_left = 1.0
+offset_top = 180.0
+offset_right = 1.0
+offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -184,12 +187,9 @@ size_flags_vertical = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="Credits Screen" unique_id=1337417657]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -53.0
-offset_right = 53.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 8
@@ -205,10 +205,32 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme = ExtResource("1_l6cm7")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 16
 text = "Credits"
 fit_content = true
 autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Credits Screen/MarginContainer/VBoxContainer" unique_id=111111002]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NamesLabel" type="Label" parent="Credits Screen/MarginContainer/VBoxContainer/ScrollContainer" unique_id=111111003]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 16
+text = "Axel Arredondo
+Connor Bosco
+Autumn Darell
+Alex Ilnytsky
+Lemon
+Mae Moon
+Jordan Parm
+Tim Rivero
+Terell
+Camile Tsui"
 horizontal_alignment = 1
 
 [node name="Back Button" type="Button" parent="Credits Screen/MarginContainer/VBoxContainer" unique_id=975138279]
@@ -227,11 +249,21 @@ z_index = -10
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -320.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("4_wu84c")
+texture = ExtResource("5_8ln24")
 expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=985594713]
+z_index = -1
+offset_left = 1.0
+offset_top = 180.0
+offset_right = 320.0
+offset_bottom = 666.0
+mouse_filter = 2
+texture = ExtResource("6_rtw2f")
 
 [connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Main Screen/MarginContainer/VBoxContainer/Settings Button" to="." method="_on_settings_button_pressed"]

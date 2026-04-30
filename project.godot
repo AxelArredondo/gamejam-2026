@@ -21,7 +21,7 @@ config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="uid://dto22rev0onc2"
+buses/default_bus_layout=""
 
 [autoload]
 
